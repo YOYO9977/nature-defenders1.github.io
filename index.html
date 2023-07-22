@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nature-defenders</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#"><img src="nature-defenders.png" alt="nature-defenders"></a>
+            </div>
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <video autoplay muted loop id="myVideo" class="video-background">
+            <source src="nature-defenders.mp4" type="video/mp4">
+        </video>
+        <!-- Content -->
+        <h1 class="introduction">Welcome to Nature Defenders Website</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <h1>About Us</h1>
+        <h3>We are a team of programmers making smart light bulbs that are supposed to protect the enviroment and save money and the light bulbs use an AI assistant called <span>zeus.ai</span></h3>
+        <img class="bulb" src="bulb.png" alt="bulb">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="contac-info">
+            <h1>Contact Us</h1>
+            <hr>
+            <p>Phone Number: +201552059114</p>
+            <p>Email: nature-defenders@company.com</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+    </div>
+    <script>
+        const theBody = document.querySelector('body');
+        const openNav = document.querySelector('.menu-bar button');
+        const closeNav = document.querySelector('.close-nav button');
+        const Navbar = document.querySelector('.navbar');
+
+        function bodyScroll() {
+            if (Navbar.classList.contains('show')) {
+                theBody.classList.add('hide-scroll');
+            } else if (theBody.classList.contains('hide-scroll')) {
+                theBody.classList.remove('hide-scroll');
+            }
+        }
+
+        function showHide() {
+            Navbar.classList.toggle('show');
+            bodyScroll();
+        }
+
+        openNav.onclick = showHide;
+        closeNav.onclick = showHide;
+    </script>
+</body>
+</html>
